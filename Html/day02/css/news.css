@@ -1,0 +1,65 @@
+/*Test8的css文件*/
+/*a的统一样式*/
+a {
+    text-decoration: none;
+    color: black;
+}
+
+/*topdiv的样式*/
+.top {
+    background: black;
+    line-height: 40px;
+    text-align: right;
+    font-size: 20px;
+}
+
+/*topdiv中的超链接a的样式*/
+.top a {
+    color: white;
+}
+
+/*navdiv的样式*/
+.nav {
+    line-height: 40px;
+}
+
+/*超链接鼠标悬停的样式*/
+a:hover {
+    color: red;
+}
+
+.left {
+    width: 20%;
+    text-align: center;
+    float: left;
+}
+
+.left img {
+    width: 38px;
+    height: 38px;
+}
+
+.left span {
+    vertical-align: 50%;
+}
+
+.center {
+    width: 60%;
+    float: left;
+}
+
+.right {
+    width: 20%;
+    float: left;
+}
+
+.footer {
+    clear: both;
+    background: blue;
+    text-align: center;
+    line-height: 25px;
+}
+
+.footer a {
+    color: white;
+}

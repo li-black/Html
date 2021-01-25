@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>组合选择器</title>
+    <style>
+        /*后代选择器只要是这个底下的所有这个标签都选择*/
+        #div1 span {
+            color: green;
+        }
+
+        /*字选择器只选择子类的标签，不选择所有*/
+        #div2 > span {
+            color: green;
+        }
+
+        /*分组选择器可以选择多个标签*/
+        p, span {
+            border: 1px solid blueviolet;
+        }
+    </style>
+</head>
+<body>
+<div id="div1">
+    <span>span</span>
+    <p><span>span</span></p>
+</div>
+<div id="div2">
+    <span>span</span>
+    <p><span>span</span></p>
+</div>
+<p>sss</p>
+<span>span</span>
+</body>
+</html>
