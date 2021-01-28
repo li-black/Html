@@ -1,12 +1,15 @@
 package com.itheima.web.servlet;
+//这是一个实现了Servlet接口的类，能够相应网页请求，请求体在web/WEB-INF/web.xml中
 
-import javax.servlet.*;
-import java.io.IOException;
+import javax.servlet.Servlet;
+import javax.servlet.ServletConfig;
+import javax.servlet.ServletRequest;
+import javax.servlet.ServletResponse;
 
 public class StudentServlet implements Servlet {
 
     @Override
-    public void init(ServletConfig servletConfig) throws ServletException {
+    public void init(ServletConfig servletConfig) {
 
     }
 
@@ -16,7 +19,7 @@ public class StudentServlet implements Servlet {
     }
 
     @Override
-    public void service(ServletRequest servletRequest, ServletResponse servletResponse) throws ServletException, IOException {
+    public void service(ServletRequest servletRequest, ServletResponse servletResponse) {
         System.out.println("Servlet服务");
     }
 

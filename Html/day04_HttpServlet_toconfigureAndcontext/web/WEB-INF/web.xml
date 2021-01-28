@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+    <!--    HttpServletConfigureDemo1配置-->
+    <servlet>
+        <servlet-name>HttpServletConfigureDemo1</servlet-name>
+        <servlet-class>com.itheima.web.servlet.HttpServletConfigureDemo1</servlet-class>
+        <!--        Configure配置，相当于配置键值对-->
+        <init-param>
+            <param-name>encoding</param-name>
+            <param-value>UTF-8</param-value>
+        </init-param>
+        <init-param>
+            <param-name>desc</param-name>
+            <param-value>This is ServletConfig</param-value>
+        </init-param>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>HttpServletConfigureDemo1</servlet-name>
+        <url-pattern>/HttpServletConfigureDemo1</url-pattern>
+    </servlet-mapping>
+    <!--    HttpServletContextDemo1配置-->
+    <servlet>
+        <servlet-name>HttpServletContextDemo1</servlet-name>
+        <servlet-class>com.itheima.web.servlet.HttpServletContextDemo1</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>HttpServletContextDemo1</servlet-name>
+        <url-pattern>/HttpServletContextDemo1</url-pattern>
+    </servlet-mapping>
+    <!--        Context配置，相当于配置键值对-->
+    <context-param>
+        <param-name>globalEncoding</param-name>
+        <param-value>UTF-8</param-value>
+    </context-param>
+    <context-param>
+        <param-name>ServletContextInfo</param-name>
+        <param-value>This is application scope</param-value>
+    </context-param>
+    <!--    HttpServletContextDemo2配置-->
+    <servlet>
+        <servlet-name>HttpServletContextDemo2</servlet-name>
+        <servlet-class>com.itheima.web.servlet.HttpServletContextDemo2</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>HttpServletContextDemo2</servlet-name>
+        <url-pattern>/HttpServletContextDemo2</url-pattern>
+    </servlet-mapping>
+</web-app>

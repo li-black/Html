@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+    <!--    HttpServletDemo1配置-->
+    <servlet>
+        <servlet-name>HttpServletDemo1</servlet-name>
+        <servlet-class>com.itheima.web.servlet.HttpServletDemo1</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>HttpServletDemo1</servlet-name>
+        <url-pattern>/HttpServletDemo1</url-pattern>
+    </servlet-mapping>
+    <!--    HttpServletDemo2配置-->
+    <servlet>
+        <servlet-name>HttpServletDemo2</servlet-name>
+        <servlet-class>com.itheima.web.servlet.HttpServletDemo2</servlet-class>
+        <!--        <load-on-startup></load-on-startup>标签指定是否要在启动服务器时创建Servlet对象，
+                值越小优先级越高包括0，如果为负数或者不写表示在启动时不创建而是在调用时创建Servlet对象-->
+        <load-on-startup>0</load-on-startup>
+    </servlet>
+    <!--    访问优先级:指名道姓>/h/>.do-->
+    <servlet-mapping>
+        <!--        指名道姓的访问方式，根据完全路径访问-->
+        <servlet-name>HttpServletDemo2</servlet-name>
+        <url-pattern>/HttpServletDemo2</url-pattern>
+    </servlet-mapping>
+    <!--    <servlet-mapping>
+            只要符合目录结构下有/h/，在其之后无论写什么都能访问
+            <servlet-name>HttpServletDemo2</servlet-name>
+            <url-pattern>/h/*</url-pattern>
+        </servlet-mapping>-->
+    <!--    <servlet-mapping>
+            只要符合目录结构，在之后无论写什么只要结尾是.do就可以访问
+            <servlet-name>HttpServletDemo2</servlet-name>
+            <url-pattern>*.do</url-pattern>
+        </servlet-mapping>-->
+    <!--    HttpServletDemo3配置-->
+    <servlet>
+        <servlet-name>HttpServletDemo3</servlet-name>
+        <servlet-class>com.itheima.web.servlet.HttpServletDemo3</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>HttpServletDemo3</servlet-name>
+        <url-pattern>/HttpServletDemo3/*</url-pattern>
+    </servlet-mapping>
+</web-app>
