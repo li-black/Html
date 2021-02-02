@@ -1,6 +1,5 @@
-<%@ page import="java.util.ArrayList" %>
-<%@ page import="com.itheima.bean.Student" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <html>
 <head>
     <title>查看学生</title>
@@ -15,21 +14,14 @@
         <th>学生成绩</th>
     </tr>
     <%--    获取session共享区域的Student集合--%>
-    <%
-        ArrayList<Student> students = (ArrayList<Student>) session.getAttribute("students");
-//        增强for遍历集合
-        for (Student student : students) {
-    %>
-    <%--    输出对应的值--%>
-    <tr align="center">
-        <td><%=student.getUsername()%>
-        </td>
-        <td><%=student.getAge()%>
-        </td>
-        <td><%=student.getScore()%>
-        </td>
-    </tr>
-    <% }%>
+    <c:forEach items="${students}" var="s">
+        <%--    输出对应的值--%>
+        <tr align="center">
+            <td>${s.username}</td>
+            <td>${s.age}</td>
+            <td>${s.score}</td>
+        </tr>
+    </c:forEach>
 </table>
 </body>
 </html>

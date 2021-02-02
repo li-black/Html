@@ -13,7 +13,6 @@ public class loginStudentServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
 //        获取用户名和密码
         String username = req.getParameter("username");
-        String password = req.getParameter("password");
 //        判断用户名输入是否正确不正确返回登录页面
         if (username == null || "".equals(username)) {
             resp.sendRedirect(req.getContextPath() + "/login.jsp");

@@ -30,7 +30,8 @@ public class addStudentServlet extends HttpServlet {
         bw.newLine();
         bw.close();
 //        设置浏览器的编码格式
-        resp.setContentType("text/html;charset=UTF-8");
+//        由过滤器处理
+//        resp.setContentType("text/html;charset=UTF-8");
         //输出文字并设置定时刷新响应给浏览器
         resp.getWriter().write("添加成功。2秒后自动跳转到首页...");
         String URL = "2;URL=" + getServletContext().getContextPath() + "/index.jsp";
